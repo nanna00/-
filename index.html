@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>나은 | 영상 제작자</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
   <style>
     /* ── 기본 리셋 & 변수 ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0d0d0d;
-      --surface: #161616;
-      --border: #2a2a2a;
-      --accent: #e8ff47;      /* 라임 옐로우 포인트 */
-      --text: #f0f0f0;
-      --muted: #888;
-      --font: 'Helvetica Neue', Arial, sans-serif;
+      --bg: #fafafa;
+      --surface: #f1f1f4;
+      --border: #e2e2e8;
+      --accent: #5b4fe9;      /* 비비드 인디고 포인트 */
+      --text: #16161a;
+      --muted: #6b6b76;
+      --font: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -38,7 +39,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.2rem 3rem;
-      background: rgba(13,13,13,0.85);
+      background: rgba(250,250,250,0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -78,7 +79,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #0d0d0d 40%, #1a1a0a 100%);
+      background: linear-gradient(135deg, #fafafa 40%, #eeecfb 100%);
       z-index: 0;
     }
 
@@ -125,7 +126,7 @@
       display: inline-block;
       padding: 0.85rem 2rem;
       background: var(--accent);
-      color: #0d0d0d;
+      color: #fff;
       font-weight: 700;
       font-size: 0.85rem;
       letter-spacing: 0.06em;
@@ -271,12 +272,12 @@
     }
 
     .play-icon svg { fill: var(--muted); transition: fill 0.2s; }
-    .gallery-item:hover .play-icon svg { fill: #0d0d0d; }
+    .gallery-item:hover .play-icon svg { fill: #fff; }
 
     .gallery-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(13,13,13,0.6);
+      background: rgba(255,255,255,0.75);
       opacity: 0;
       transition: opacity 0.3s;
       display: flex;
@@ -350,7 +351,10 @@
       font-size: 0.7rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: #fff;
+      background: rgba(0,0,0,0.45);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
       position: absolute;
       bottom: 0.75rem;
       left: 0.75rem;
@@ -399,7 +403,7 @@
 
     .contact-link:hover {
       border-color: var(--accent);
-      background: rgba(232,255,71,0.04);
+      background: rgba(91,79,233,0.06);
     }
 
     .contact-link-icon {
@@ -563,7 +567,7 @@
   <div class="gallery-grid">
 
     <!-- 작업물 1: 크게 (메인) -->
-    <div class="gallery-item" style="background:#111;">
+    <div class="gallery-item">
       <!--
         유튜브 영상을 넣으려면 아래 주석을 해제하고
         VIDEO_ID 부분을 실제 유튜브 동영상 ID로 바꾸세요.
@@ -584,7 +588,7 @@
     </div>
 
     <!-- 작업물 2 -->
-    <div class="gallery-item" style="background:#0f0f0f;">
+    <div class="gallery-item">
       <div class="gallery-placeholder">
         <div class="play-icon">
           <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l6 4-6 4V4z"/></svg>
@@ -598,7 +602,7 @@
     </div>
 
     <!-- 작업물 3 -->
-    <div class="gallery-item" style="background:#0c0c0c;">
+    <div class="gallery-item">
       <div class="gallery-placeholder">
         <div class="play-icon">
           <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l6 4-6 4V4z"/></svg>
@@ -612,7 +616,7 @@
     </div>
 
     <!-- 작업물 4 -->
-    <div class="gallery-item" style="background:#101010;">
+    <div class="gallery-item">
       <div class="gallery-placeholder">
         <div class="play-icon">
           <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6 4l6 4-6 4V4z"/></svg>
@@ -655,7 +659,7 @@
     </div>
 
     <!-- 큰 카드 -->
-    <div class="mood-card tall" style="background:#111;">
+    <div class="mood-card tall" style="background:var(--surface);">
       <div class="mood-inner">
         <div class="mood-add-btn">+</div>
         <div class="mood-add-label">이미지 추가</div>
@@ -665,7 +669,7 @@
 
     <!-- 색상 견본 -->
     <div class="mood-card">
-      <div class="mood-color" style="background: linear-gradient(160deg, #2d1b00, #5c3a00);"></div>
+      <div class="mood-color" style="background: linear-gradient(160deg, #7a1f1f, #b8452c);"></div>
       <span class="mood-tag">앰버 필름</span>
     </div>
 
@@ -676,7 +680,7 @@
     </div>
 
     <!-- 넓은 카드 -->
-    <div class="mood-card wide" style="background:#0f0f0f;">
+    <div class="mood-card wide" style="background:var(--surface);">
       <div class="mood-inner">
         <div class="mood-add-btn">+</div>
         <div class="mood-add-label">영상 / 이미지 추가</div>
@@ -686,22 +690,22 @@
 
     <!-- 색상 견본 -->
     <div class="mood-card">
-      <div class="mood-color" style="background: linear-gradient(160deg, #1a0a1a, #3d1a3d);"></div>
+      <div class="mood-color" style="background: linear-gradient(160deg, #2e1a3d, #5b2e70);"></div>
       <span class="mood-tag">딥 퍼플</span>
     </div>
 
     <!-- 텍스트 레퍼런스 -->
-    <div class="mood-card" style="background:#111;">
+    <div class="mood-card" style="background:var(--surface);">
       <div class="mood-inner" style="text-align:center; padding:1.5rem;">
-        <p style="font-size:0.8rem; color:#555; font-style:italic; line-height:1.5;">
+        <p style="font-size:0.8rem; color:var(--muted); font-style:italic; line-height:1.5;">
           "In cinema, images don't illustrate words — they replace them."
         </p>
-        <p style="font-size:0.7rem; color:#333; margin-top:0.8rem;">— 참고 문구</p>
+        <p style="font-size:0.7rem; color:#9a97a3; margin-top:0.8rem;">— 참고 문구</p>
       </div>
     </div>
 
     <!-- 링크 레퍼런스 카드 -->
-    <div class="mood-card tall" style="background:#0d0d0d;">
+    <div class="mood-card tall" style="background:var(--surface);">
       <div class="mood-inner">
         <div class="mood-add-btn">+</div>
         <div class="mood-add-label">링크 추가</div>
@@ -731,29 +735,29 @@
     </p>
 
     <div class="contact-links">
-      <a href="mailto:your@email.com" class="contact-link">
+      <a href="mailto:dlskdms1621@gmail.com" class="contact-link">
         <div class="contact-link-icon">✉</div>
         <div class="contact-link-info">
           <span>이메일</span>
-          <strong>your@email.com</strong>
+          <strong>dlskdms1621@gmail.com</strong>
         </div>
         <div class="contact-arrow">→</div>
       </a>
 
-      <a href="https://instagram.com/" target="_blank" class="contact-link">
+      <a href="https://instagram.com/nannada_0o0" target="_blank" class="contact-link">
         <div class="contact-link-icon">📷</div>
         <div class="contact-link-info">
           <span>인스타그램</span>
-          <strong>@your_handle</strong>
+          <strong>@nannada_0o0</strong>
         </div>
         <div class="contact-arrow">→</div>
       </a>
 
-      <a href="https://youtube.com/" target="_blank" class="contact-link">
+      <a href="https://www.youtube.com/@%EC%96%BC%EB%A0%81%EB%9A%B1%EB%95%85%EA%B3%B5%EC%A3%BC%EB%8B%98" target="_blank" class="contact-link">
         <div class="contact-link-icon">▶</div>
         <div class="contact-link-info">
           <span>유튜브</span>
-          <strong>채널 이름</strong>
+          <strong>얼렁뚱땅 공주님</strong>
         </div>
         <div class="contact-arrow">→</div>
       </a>
@@ -765,20 +769,22 @@
     <p class="section-label" style="margin-top:0;">Message</p>
     <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:1.5rem;">메시지 보내기</h3>
 
-    <form class="contact-form" onsubmit="handleSubmit(event)">
+    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="access_key" value="fcefa123-88eb-48dc-b9b7-d6b40fcac876" />
+      <input type="checkbox" name="botcheck" style="display:none" />
       <div class="form-field">
         <label>이름</label>
-        <input type="text" placeholder="홍길동" />
+        <input type="text" name="name" placeholder="홍길동" required />
       </div>
       <div class="form-field">
         <label>이메일</label>
-        <input type="email" placeholder="hello@example.com" />
+        <input type="email" name="email" placeholder="hello@example.com" required />
       </div>
       <div class="form-field">
         <label>메시지</label>
-        <textarea placeholder="안녕하세요, 작업 문의드립니다..."></textarea>
+        <textarea name="message" placeholder="안녕하세요, 작업 문의드립니다..." required></textarea>
       </div>
-      <button type="submit" class="btn" style="align-self:flex-start;">보내기 →</button>
+      <button type="submit" class="btn" id="submitBtn" style="align-self:flex-start;">보내기 →</button>
     </form>
   </div>
 </section>
@@ -790,18 +796,44 @@
 </footer>
 
 <script>
-  // 폼 제출 (실제 연결은 Formspree 등 서비스 사용 추천)
-  function handleSubmit(e) {
+  // 폼 제출 (Web3Forms 연동)
+  async function handleSubmit(e) {
     e.preventDefault();
-    alert('메시지가 전송되었습니다! (실제 연결은 Formspree.io 등을 사용하세요)');
+    const form = e.target;
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = '전송 중...';
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        alert('메시지가 전송되었습니다! 빠른 시일 내에 답변드릴게요.');
+        form.reset();
+      } else {
+        alert('전송에 실패했습니다: ' + (result.message || '알 수 없는 오류'));
+      }
+    } catch (err) {
+      alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
   }
 
   // 스크롤 시 내비 배경 강화
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     nav.style.background = window.scrollY > 50
-      ? 'rgba(13,13,13,0.98)'
-      : 'rgba(13,13,13,0.85)';
+      ? 'rgba(250,250,250,0.98)'
+      : 'rgba(250,250,250,0.85)';
   });
 
   // 갤러리 추가 버튼 클릭
